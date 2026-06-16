@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.vite/
+.edge-shot-profile/
+vite-dev.log
+vite-dev.err

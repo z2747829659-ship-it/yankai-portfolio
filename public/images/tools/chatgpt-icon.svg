@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ChatGPT icon">
+  <defs>
+    <linearGradient id="gpt-bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#19c37d"/>
+      <stop offset="1" stop-color="#10a37f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#gpt-bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M31.8 10.9c5.1 0 8.7 3 8.7 7.3 0 2.8-1.6 5.1-4.4 6.8l-4.3 2.5-4.3-2.5c-2.8-1.7-4.4-4-4.4-6.8 0-4.3 3.6-7.3 8.7-7.3Z"/>
+    <path d="M50 22.2c2.6 4.5 1.8 9.1-2 11.3-2.4 1.4-5.2 1.2-8.1-.5l-4.3-2.5v-5l4.3-2.5c2.9-1.7 5.7-1.9 8.1-.5.8.5 1.5 1.1 2 1.8"/>
+    <path d="M50 41.8c-2.6 4.5-6.9 6.1-10.7 3.9-2.4-1.4-3.7-4-3.7-7.3v-5l4.3-2.5 4.3 2.5c2.9 1.7 4.5 4 4.5 6.8"/>
+    <path d="M32.2 53.1c-5.1 0-8.7-3-8.7-7.3 0-2.8 1.6-5.1 4.4-6.8l4.3-2.5 4.3 2.5c2.8 1.7 4.4 4 4.4 6.8 0 4.3-3.6 7.3-8.7 7.3Z"/>
+    <path d="M14 41.8c-2.6-4.5-1.8-9.1 2-11.3 2.4-1.4 5.2-1.2 8.1.5l4.3 2.5v5L24.1 41c-2.9 1.7-5.7 1.9-8.1.5-.8-.5-1.5-1.1-2-1.8"/>
+    <path d="M14 22.2c2.6-4.5 6.9-6.1 10.7-3.9 2.4 1.4 3.7 4 3.7 7.3v5L24.1 33c-2.9-1.7-4.5-4-4.5-6.8"/>
+  </g>
+</svg>

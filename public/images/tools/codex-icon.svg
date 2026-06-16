@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Codex icon">
+  <defs>
+    <radialGradient id="bg" cx="36%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#1b2a22"/>
+      <stop offset="0.56" stop-color="#070b08"/>
+      <stop offset="1" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="mark" x1="16" y1="12" x2="50" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.46" stop-color="#effff3"/>
+      <stop offset="1" stop-color="#b9ffd0"/>
+    </linearGradient>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.48 0 0 0 0 1 0 0 0 0 0.62 0 0 0 0.55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#mark)" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft-glow)">
+    <path d="M31.8 10.8c5.2 0 8.8 3 8.8 7.4 0 2.8-1.6 5.1-4.5 6.8l-4.3 2.5-4.3-2.5c-2.9-1.7-4.5-4-4.5-6.8 0-4.4 3.6-7.4 8.8-7.4Z"/>
+    <path d="M50.2 22.1c2.6 4.5 1.8 9.2-2 11.4-2.5 1.4-5.3 1.2-8.2-.5l-4.4-2.5v-5l4.4-2.5c2.9-1.7 5.7-1.9 8.2-.5.8.5 1.5 1.1 2 1.8"/>
+    <path d="M50.2 41.9c-2.6 4.5-7 6.1-10.8 3.9-2.5-1.4-3.7-4-3.7-7.3v-5l4.4-2.5 4.4 2.5c2.9 1.7 4.5 4 4.5 6.9"/>
+    <path d="M32.2 53.2c-5.2 0-8.8-3-8.8-7.4 0-2.8 1.6-5.1 4.5-6.8l4.3-2.5 4.3 2.5c2.9 1.7 4.5 4 4.5 6.8 0 4.4-3.6 7.4-8.8 7.4Z"/>
+    <path d="M13.8 41.9c-2.6-4.5-1.8-9.2 2-11.4 2.5-1.4 5.3-1.2 8.2.5l4.4 2.5v5L24 41c-2.9 1.7-5.7 1.9-8.2.5-.8-.5-1.5-1.1-2-1.8"/>
+    <path d="M13.8 22.1c2.6-4.5 7-6.1 10.8-3.9 2.5 1.4 3.7 4 3.7 7.3v5L24 33c-2.9-1.7-4.5-4-4.5-6.9"/>
+  </g>
+  <circle cx="32" cy="32" r="3.8" fill="#ffffff"/>
+</svg>
