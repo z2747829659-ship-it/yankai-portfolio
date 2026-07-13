@@ -8,19 +8,32 @@ import { HeroScene3D } from "./HeroScene3D.jsx";
 export function Hero() {
   const heroRef = useRef(null);
   const videoRef = useRef(null);
+  const pipVideoRef = useRef(null);
   const [navFloating, setNavFloating] = useState(false);
 
   useEffect(() => {
     const hero = heroRef.current;
-    const video = videoRef.current;
-    if (!hero || !video) return undefined;
+    const videos = [videoRef.current, pipVideoRef.current].filter(Boolean);
+    if (!hero || videos.length === 0) return undefined;
+
+    const playVideos = () => {
+      videos.forEach((video) => {
+        video.play().catch(() => {});
+      });
+    };
+
+    const pauseVideos = () => {
+      videos.forEach((video) => {
+        video.pause();
+      });
+    };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play().catch(() => {});
+          playVideos();
         } else {
-          video.pause();
+          pauseVideos();
         }
       },
       { threshold: 0.05 }
@@ -60,9 +73,14 @@ export function Hero() {
   return (
     <section id="home" className="hero" ref={heroRef}>
       <div className="hero-video-slot" aria-hidden="true">
-        <video ref={videoRef} className="hero-video" autoPlay muted loop playsInline>
+        <video ref={videoRef} className="hero-video" autoPlay muted loop playsInline preload="auto">
           <source src="videos/hero-background.mp4" type="video/mp4" />
         </video>
+        <div className="hero-pip-layer">
+          <video ref={pipVideoRef} className="hero-pip-video" autoPlay muted loop playsInline preload="auto">
+            <source src="videos/pip-showreel.mov" type="video/quicktime" />
+          </video>
+        </div>
         <div className="video-placeholder" />
       </div>
 

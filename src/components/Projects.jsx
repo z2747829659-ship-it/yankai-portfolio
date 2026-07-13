@@ -9,8 +9,8 @@ export function Projects() {
     <Section
       id="projects"
       eyebrow="Featured Projects"
-      title="Prototype ideas presented as a small digital exhibition."
-      intro="These cards use visual placeholders for now, so screenshots and videos can be replaced later without changing the structure."
+      title="Five ideas made tangible."
+      intro="Working prototypes across web, mobile, automation and business transformation."
     >
       <div className="project-grid">
         {projects.map((project, index) => {
@@ -52,6 +52,10 @@ export function Projects() {
                 </div>
               </div>
               <div className="project-content">
+                <div className="project-proof-row">
+                  <span>{project.contribution}</span>
+                  <strong>{project.outcome}</strong>
+                </div>
                 <div className="project-title-row">
                   <h3>{project.title}</h3>
                   <ArrowUpRight size={20} />

@@ -59,7 +59,9 @@ export const projects = [
     tags: ["React", "Vite", "Personal Website", "Motion Design"],
     icon: Layers3,
     accent: "cyan",
-    image: "images/optimized/portfolio-hero-shot.jpg"
+    image: "images/optimized/portfolio-hero-shot.jpg",
+    contribution: "Visual direction + frontend build",
+    outcome: "Cinematic React experience"
   },
   {
     title: "AI Copywriting Mini Program Prototype",
@@ -68,7 +70,9 @@ export const projects = [
     tags: ["AI Tool", "WeChat Mini Program", "Content Creation", "Prototype"],
     icon: WandSparkles,
     accent: "green",
-    image: "images/projects/ai-copywriting-prototype.png"
+    image: "images/projects/ai-copywriting-prototype.png",
+    contribution: "Product flow + prototype",
+    outcome: "Three-step generation flow"
   },
   {
     title: "Pet Care App Prototype",
@@ -77,7 +81,9 @@ export const projects = [
     tags: ["App Prototype", "UX Flow", "Pet Care", "Singapore"],
     icon: MousePointer2,
     accent: "green",
-    image: "images/optimized/pet-care-app-prototype.jpg"
+    image: "images/optimized/pet-care-app-prototype.jpg",
+    contribution: "App structure + UX flow",
+    outcome: "Core service journey"
   },
   {
     title: "Daily AI & Economy Briefing Automation",
@@ -86,7 +92,9 @@ export const projects = [
     tags: ["Automation", "AI News", "Workflow", "Productivity"],
     icon: Bot,
     accent: "green",
-    image: "images/projects/daily-ai-economy-briefing.png"
+    image: "images/projects/daily-ai-economy-briefing.png",
+    contribution: "Workflow + output design",
+    outcome: "Markdown + HTML briefing"
   },
   {
     title: "Traditional Business Website Concept",
@@ -95,7 +103,9 @@ export const projects = [
     tags: ["Business Website", "Brand Upgrade", "Digital Transformation"],
     icon: Store,
     accent: "green",
-    image: "images/optimized/traditional-business-website.jpg"
+    image: "images/optimized/traditional-business-website.jpg",
+    contribution: "Brand direction + web concept",
+    outcome: "Premium digital presence"
   }
 ];
 

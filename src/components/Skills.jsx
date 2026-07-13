@@ -1,10 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const maskPath =
-  "m53.54,45.42c2.19-3.79,7.67-3.79,9.86,0l4.54,7.87c1.17,2.02,1.17,4.51,0,6.54l-8.15,13.81c-1.68,2.91.42,6.55,3.78,6.55h17.81c3.45,0,5.61-3.74,3.89-6.73l-28.76-49.81c-2.95-5.12-10.34-5.12-13.29,0l-28.46,49.3c-1.86,3.22.46,7.24,4.18,7.24h10.23c2.55,0,4.91-1.36,6.19-3.57l18.18-31.19Z";
-
-const maskUrl = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='${maskPath}'/%3E%3C/svg%3E")`;
+import { BarChart3, Braces, MousePointer2, Route, Sparkles } from "lucide-react";
 
 const stats = [
   { value: "5", label: "Interactive Prototypes Built" },
@@ -20,6 +16,14 @@ const skillSignals = [
   "Business Analysis",
   "Data Visualization",
   "Interaction Design Thinking"
+];
+
+const systemNodes = [
+  { label: "Idea", icon: Sparkles, className: "node-idea" },
+  { label: "Flow", icon: Route, className: "node-flow" },
+  { label: "Build", icon: Braces, className: "node-build" },
+  { label: "Test", icon: MousePointer2, className: "node-test" },
+  { label: "Measure", icon: BarChart3, className: "node-measure" }
 ];
 
 const toolIcons = [
@@ -109,30 +113,58 @@ export function Skills() {
             </motion.div>
           </motion.div>
 
-          <div className="stats-video-column">
+          <div className="stats-video-column stats-system-column">
             <motion.div
-              className="stats-mask-frame"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1.12 }}
+              className="prototype-system"
+              initial={{ opacity: 0, scale: 0.96, x: 24 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0, ease: "easeOut" }}
-              style={{
-                WebkitMaskImage: maskUrl,
-                WebkitMaskSize: "contain",
-                WebkitMaskRepeat: "no-repeat",
-                WebkitMaskPosition: "center",
-                maskImage: maskUrl,
-                maskSize: "contain",
-                maskRepeat: "no-repeat",
-                maskPosition: "center"
-              }}
+              transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
             >
-              <video autoPlay loop muted playsInline className="stats-mask-video">
-                <source
-                  src="https://app-uploads.krea.ai/wan-videos/7f348c17-c3aa-40c9-9d5b-a2bed9a72c2e.mp4"
-                  type="video/mp4"
-                />
-              </video>
+              <div className="system-topline">
+                <span>Prototype System</span>
+                <i>LIVE</i>
+              </div>
+              <div className="system-canvas">
+                <svg className="system-connections" viewBox="0 0 720 560" aria-hidden="true">
+                  <path d="M100 72 C184 72 228 224 300 270" />
+                  <path d="M620 100 C540 108 500 230 420 270" />
+                  <path d="M70 260 C164 260 230 274 300 280" />
+                  <path d="M620 470 C530 450 486 334 420 300" />
+                  <path d="M195 485 C232 404 275 342 320 310" />
+                  <circle cx="100" cy="72" r="4" />
+                  <circle cx="620" cy="100" r="4" />
+                  <circle cx="70" cy="260" r="4" />
+                  <circle cx="620" cy="470" r="4" />
+                  <circle cx="195" cy="485" r="4" />
+                </svg>
+                <div className="system-core">
+                  <span>Y/Z</span>
+                  <strong>BUILD</strong>
+                  <small>idea to interface</small>
+                </div>
+                {systemNodes.map(({ label, icon: Icon, className }, index) => (
+                  <motion.div
+                    className={`system-node ${className}`}
+                    key={label}
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 3.2 + index * 0.3, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Icon size={18} />
+                    <span>{label}</span>
+                  </motion.div>
+                ))}
+                <div className="system-screen screen-a"><i /><i /><i /></div>
+                <div className="system-screen screen-b"><span /><span /><span /></div>
+                <div className="system-readout readout-a"><strong>05</strong><span>PROTOTYPES</span></div>
+                <div className="system-readout readout-b"><strong>04+</strong><span>DASHBOARDS</span></div>
+              </div>
+              <div className="system-footer">
+                <span>Think</span><i />
+                <span>Prototype</span><i />
+                <span>Test</span><i />
+                <span>Refine</span>
+              </div>
             </motion.div>
           </div>
         </div>

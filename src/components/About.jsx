@@ -7,7 +7,7 @@ const aboutCards = [
   {
     title: "Singapore",
     label: "Studying here",
-    copy: "Studying in a global city.",
+    copy: "Learning and building in Singapore.",
     icon: MapPin,
     tone: "cyan",
     frame: 0,
@@ -16,7 +16,7 @@ const aboutCards = [
   {
     title: "AI Tools",
     label: "Building partner",
-    copy: "From rough idea to working prototype.",
+    copy: "Codex and ChatGPT as building partners.",
     icon: Bot,
     tone: "emerald",
     frame: 1,
@@ -25,7 +25,7 @@ const aboutCards = [
   {
     title: "Prototype",
     label: "Explore fast",
-    copy: "Test the idea before overbuilding.",
+    copy: "Make the idea tangible before overbuilding.",
     icon: Boxes,
     tone: "blue",
     frame: 2,
@@ -34,7 +34,7 @@ const aboutCards = [
   {
     title: "Product Flow",
     label: "Screens first",
-    copy: "User path, value and usability first.",
+    copy: "Shape the path before polishing the screen.",
     icon: Route,
     tone: "green",
     frame: 3,
@@ -43,7 +43,7 @@ const aboutCards = [
   {
     title: "Visual Direction",
     label: "First glance",
-    copy: "Atmosphere, hierarchy and interaction.",
+    copy: "Create a distinct first impression.",
     icon: Eye,
     tone: "ice",
     frame: 4,
@@ -56,10 +56,11 @@ export function About() {
     <Section
       id="about"
       eyebrow="About / Identity"
-      title="Five signals, one visual system."
+      title="How I turn ideas into something visible."
       className="about-section"
     >
       <div className="about-icon-row" aria-label="Yankai Zhao identity signals">
+        <div className="about-signal-line" aria-hidden="true" />
         {aboutCards.map((item, index) => {
           const Icon = item.icon;
 
@@ -73,12 +74,12 @@ export function About() {
               viewport={{ once: true, margin: "-80px" }}
               whileHover={{ y: -16, scale: 1.14 }}
               transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 21,
+                duration: 0.58,
+                ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.055
               }}
             >
+              <span className="about-card-number">0{index + 1}</span>
               <div className="about-icon-bg" aria-hidden="true">
                 <img src={item.image} alt="" loading="lazy" decoding="async" />
               </div>
