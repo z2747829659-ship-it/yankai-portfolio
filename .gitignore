@@ -4,3 +4,6 @@ dist/
 .edge-shot-profile/
 vite-dev.log
 vite-dev.err
+
+.vercel
+.env*
