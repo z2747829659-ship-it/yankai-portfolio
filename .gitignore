@@ -7,3 +7,9 @@ vite-dev.err
 
 .vercel
 .env*
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  
